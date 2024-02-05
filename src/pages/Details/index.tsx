@@ -1,13 +1,16 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Container } from "./style";
-import { useQuerypokemonDetails } from "../../hooks/useQueryPokeTails";
+import { useQueryPokemonDetails } from "../../hooks/useQueryPokemonDetails";
 import { useEffect } from "react";
 
 export function Details() {
   const { name } = useParams();
-  const { data, isLoading, error } = useQuerypokemonDetails(name!);
-  if (error) console.error(isLoading);
+
+  const { data, isLoading, error } = useQueryPokemonDetails(name!);
+
   const navigate = useNavigate();
+
+  if (error) console.error(error);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -32,11 +35,10 @@ export function Details() {
           </div>
 
           <div className="boxStatus">
-          <strong>
-            #{data.id} {data.name}
-          </strong>
+            <strong>
+              #{data.id} {data.name}
+            </strong>
           </div>
-
         </div>
       )}
     </Container>

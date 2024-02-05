@@ -4,21 +4,22 @@ import pokemonLogo from "../../assets/pokemon-logo.png";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type Input = {
-  inputSearch: string
-}
+  inputSearch: string;
+};
 
 export function Header() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<Input>();
 
   const onSubmit: SubmitHandler<Input> = (data) => {
-    navigate(`/search?q=${data.inputSearch}`)
-    reset()
+    navigate(`/search?q=${data.inputSearch}`);
+    reset();
   };
 
   return (
@@ -26,15 +27,16 @@ export function Header() {
       <Link to={"/"}>
         <img src={pokemonLogo} alt="logo com texto pokemon" />
       </Link>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
           <label htmlFor="inputSearch" className="srOnly">
             Pesquisar Pokémon
           </label>
+
           <input
             type="text"
             id="inputSearch"
-            autoFocus
             placeholder="Pesquisar Pokémon"
             {...register("inputSearch", {
               required: "Preencha o nome do Pokémon",

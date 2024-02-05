@@ -10,7 +10,8 @@ export const Container = styled.header`
   padding: 2.4rem 3.2rem 3.2rem;
   box-shadow: 0px 0px 1px 1px #0004;
   width: 100%;
-  h1 {
+
+  img {
     width: 14rem;
     filter: drop-shadow(1px 1px 1px #000b);
   }
@@ -35,29 +36,30 @@ export const Container = styled.header`
     border-radius: 0.8rem;
     padding: 0.8rem 1.6rem;
     font-weight: 700;
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.complementary};
     color: ${({ theme }) => theme.colors.light};
     box-shadow: 1px 1px 2px 0px #0008;
-  }
 
-  &:hover {
-    cursor: pointer;
-    filter: brightness(1.05);
+    &:hover {
+      cursor: pointer;
+      filter: brightness(1.05);
+    }
   }
 
   @media (min-width: 768px) {
     flex-direction: row;
     padding: 2.4rem 3.2rem;
-  }
 
-  img {
-    width: 20rem;
-  }
+    img {
+      width: 20rem;
+    }
 
-  input {
-    font-size: 1.6rem;
-  }
-  button {
-    font-size: 1.6rem;
+    input {
+      font-size: 1.6rem;
+    }
+
+    button {
+      font-size: 1.6rem;
+    }
   }
 `;

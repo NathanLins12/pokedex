@@ -37,4 +37,4 @@ export const appTheme = {
       el: 3.2,
     },
   },
-}; 
+};

@@ -71,7 +71,7 @@ export const Container = styled.main`
       }
 
       button {
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding: 0.8rem 1.6rem;
       }
     }

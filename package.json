@@ -1,5 +1,5 @@
 {
-  "name": "pokedex",
+  "name": "pokedex2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,13 +12,10 @@
   "dependencies": {
     "@tanstack/react-query": "^5.17.4",
     "axios": "^1.6.4",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.3",
     "react-router-dom": "^6.21.1",
-    "sort-by": "^1.2.0",
     "styled-components": "^6.1.6"
   },
   "devDependencies": {

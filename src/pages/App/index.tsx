@@ -7,7 +7,8 @@ export function App() {
   return (
     <Container>
       <Header />
-    {/* outlet is main */}
+
+      {/* outlet is main */}
       <Outlet />
 
       <Footer />

@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { CardType } from "../../components/CardType";
 import pokeball from "../../assets/pokeball.png";
 
-
 export function Details() {
   const { name } = useParams();
 
@@ -27,12 +26,14 @@ export function Details() {
       {data && (
         <div className="boxDetails">
           <button onClick={() => navigate(-1)} className="buttonBackPage">
-            &lt; voltar
+            <h1>Voltar</h1>
           </button>
 
           <div className="pokemonImage">
             <img
-              src={data.sprites.other["official-artwork"].front_default || pokeball}
+              src={
+                data.sprites.other["official-artwork"].front_default || pokeball
+              }
               alt={data.name}
             />
           </div>
@@ -48,21 +49,28 @@ export function Details() {
 
             <div className="boxTypes">
               {data.types.map((type) => {
-                return <CardType key={type.type.name} type={type.type.name} size={16} />
+                return (
+                  <CardType
+                    key={type.type.name}
+                    type={type.type.name}
+                    size={16}
+                  />
+                );
               })}
-                </div>
-
+            </div>
           </div>
 
           <div className="boxStats">
             {data.stats.map((status) => {
               return (
                 <div className="stats" key={status.stat.name}>
-                  <span className="statsName" key={status.stat.name}>{status.stat.name}</span>
+                  <span className="statsName" key={status.stat.name}>
+                    {status.stat.name}
+                  </span>
                   <progress value={status.base_stat} max={200} />
                   <span className="statsValue">{status.base_stat}</span>
                 </div>
-              )
+              );
             })}
           </div>
         </div>

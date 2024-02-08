@@ -18,13 +18,13 @@ export const Container = styled.main`
       color: ${({ theme }) => theme.colors.light};
       box-shadow: 1px 1px 1px #0004;
       border-radius: 7rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      width: 10%;
+      font-size: 1rem;
+      font-weight: 500;
+      width: 20%;
       position: absolute;
       top: 16px;
       left: 18px;
-      padding: 0.5rem;
+      padding: 0.7rem;
 
       &:hover {
         text-decoration: underline;
